@@ -1,5 +1,18 @@
+@media only screen and (max-width: 768px) {
+  .breaking-bad-col {
+    display: none;
+    
+  }
+  .col-6{
+    width: 100% !important;
+  }
+}
+
+
 .login-container {
   text-align: center;
+  min-width: 100% !important;
+  max-height: 100vh !important;
 }
 .logo {
   width: 98px;
@@ -24,13 +37,15 @@
   font-size: 16px;
   font-family: "Rubik-Regular";
 }
-.label {
+label {
   font-size: 13px;
   margin-bottom: 8px;
   margin-top: 21px;
   width: 350px !important;
   text-align: left;
   font-family: "Rubik-Regular";
+  text-align: left;
+display: inline-block;
 }
 input {
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -41,6 +56,7 @@ input {
   height: 50px;
   border-radius: 3px;
   padding-left: 20px;
+  display: block;
 }
 input::placeholder {
   padding: 20px;
@@ -74,4 +90,13 @@ a {
   color: #959bb7;
   cursor: pointer;
   font-family: "Rubik-Regular";
+}
+
+.breaking-bad{
+  width: 100%;
+min-height: 100% !important;
+}
+.breaking-bad-col{
+  margin: 0px;
+  padding: 0px !important;
 }
