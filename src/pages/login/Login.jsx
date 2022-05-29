@@ -2,13 +2,14 @@ import React from "react";
 import BreakingBad from "../../assets/images/Breaking-Bad.png";
 import Logo from "../../assets/images/Lena-Software-Logo.png";
 import "./Login.css";
-import { Link} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-
-  const handleSubmit =(e)=>{
-    e.preventDefault()
-  }
+  let navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/components");
+  };
   return (
     <div className="container login-container">
       <div className="row ">
@@ -35,16 +36,27 @@ export default function Login() {
           </div>
           <div className="row justify-content-center">
             <div className="col">
-            <form onSubmit={handleSubmit}>
-              <label>Email
-              <input type="email" placeholder="Enter an email" required/></label>
-              <br/>
-              <label>Password
-              <input type="password" placeholder="Enter password"  required/></label>
-              <br/>
-              <label><Link to="/components"><input className="login-button" type="submit" value="Login"/></Link></label>
-            </form>
-          </div></div>
+              <form onSubmit={handleSubmit}>
+                <label>
+                  Email
+                  <input type="email" placeholder="Enter an email" required />
+                </label>
+                <br />
+                <label>
+                  Password
+                  <input
+                    type="password"
+                    placeholder="Enter password"
+                    required
+                  />
+                </label>
+                <br />
+                <label>
+                  <input className="login-button" type="submit" value="Login" />
+                </label>
+              </form>
+            </div>
+          </div>
           <div className="row">
             <a href="https://lenasoftware.com/en/contact" target="_blank">
               <p className="forgot-password-text">Forgot your password?</p>

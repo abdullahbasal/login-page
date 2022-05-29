@@ -1,18 +1,18 @@
-import React from 'react';
-import JohnImg from '../../assets/images/John.png';
-import location from '../../assets/icons/location.png';
-import logout from '../../assets/icons/logout.png';
-import settings from '../../assets/icons/settings.png';
-import users from '../../assets/icons/users.png';
-import './Menu.css';
+import React from "react";
+import JohnImg from "../../../assets/images/JohnDoe.png";
+import location from "../../../assets/icons/location.png";
+import logout from "../../../assets/icons/logout.png";
+import settings from "../../../assets/icons/settings.png";
+import users from "../../../assets/icons/users.png";
+import "./Menu.css";
 export default function Menu() {
   return (
-    <>
+    <div className="container">
       <div className="card">
         <div className="card-img-top">
           <img src={JohnImg} className="profil-img" alt="Card image cap" />
-          <p>John M. Doe</p>
-          <p>john.doe@lenasoftware.com</p>
+          <p className="card-name">John M. Doe</p>
+          <p className="card-mail">john.doe@lenasoftware.com</p>
         </div>
         <div className="card-body">
           <div className="row">
@@ -37,6 +37,6 @@ export default function Menu() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
